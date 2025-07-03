@@ -8,7 +8,7 @@ body {
     height: 100%;
 }
 
-body{
+body {
     @extend %opensans-400;
     font-size: 16px;
     color: vars.$color-grey;
@@ -35,6 +35,7 @@ body{
     padding: 35px 0;
     color: vars.$color-black;
     text-transform: uppercase;
+
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -44,7 +45,8 @@ body{
 
     &__lang {
         display: flex;
-        &--active{
+
+        &--active {
             @extend %opensans-700;
         }
     }
@@ -70,5 +72,101 @@ body{
     &__list {
         display: flex;
         gap: 0 30px;
+    }
+}
+
+.footer {
+    color: vars.$color-white;
+    background-color: vars.$color-blue;
+    &__menu {
+        padding: 60px 0;
+        border-bottom: 1px solid vars.$color-light-grey;
+    }
+    
+    &__menu-list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__menu-link {
+        border-bottom: 1px solid rgb(255, 255, 255, .35);
+    }
+
+    &__elements {
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0;
+    }
+
+    &__social-list{
+        display: flex;
+        gap: 10px;
+    }
+
+    &__element-title {
+        opacity: .5;
+        margin-bottom: 20px;
+    }
+
+    &__element-item {
+        margin-bottom: 5px;
+    }
+
+    &__form {
+        width: 250px;
+        position: relative;
+    }
+
+    &__form-input {
+        display: block;
+        width: 100%;
+        padding: 1px 30px 5px 0;
+        color: vars.$color-white;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid vars.$color-light-grey;
+        &::placeholder{
+            color: vars.$color-white;
+        }
+    }
+
+    &__form-btn {
+        position: absolute;
+        top: 4px;
+        right: 1px;
+        @extend %button-reset;
+    }
+
+    &__bottom {
+        background-color: vars.$color-black;
+    }
+
+    &__bottom-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+        font-size: 11px;
+    }
+
+    &__bottom-copy {
+        padding-left: 75px;
+    }
+
+    &__bottom-list {
+        display: flex;
+        gap: 0 37px;
+        padding-right: 75px;
+    }
+    
+    &__bottom-item + .footer__bottom-item{
+        position: relative;
+        &::before{
+            content: '|';
+            position: absolute;
+            left: -20px;
+        }
     }
 }

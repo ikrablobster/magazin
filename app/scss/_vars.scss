@@ -24,3 +24,9 @@ $color-light-grey: #CDCDCD;
     font-family: 'OpenSans-Bold', sans-serif;
     font-weight: 700;
 }
+%button-reset{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
