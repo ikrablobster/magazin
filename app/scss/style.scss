@@ -15,6 +15,17 @@ body {
     line-height: 1.3;
 }
 
+.promo {
+    text-align: center;
+    background-color: vars.$color-light-grey;
+
+    &__text {
+        padding: 7px 0 9px;
+        text-transform: uppercase;
+        font-size: 11px;
+    }
+}
+
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -68,6 +79,15 @@ body {
     display: inline-block;
 }
 
+.logo__header {
+    color: vars.$color-black;
+}
+
+.logo__footer {
+    color: vars.$color-white;
+}
+
+
 .menu {
     &__list {
         display: flex;
@@ -78,11 +98,12 @@ body {
 .footer {
     color: vars.$color-white;
     background-color: vars.$color-blue;
+
     &__menu {
         padding: 60px 0;
         border-bottom: 1px solid vars.$color-light-grey;
     }
-    
+
     &__menu-list {
         display: flex;
         justify-content: space-around;
@@ -100,7 +121,7 @@ body {
         padding: 50px 0;
     }
 
-    &__social-list{
+    &__social-list {
         display: flex;
         gap: 10px;
     }
@@ -127,7 +148,8 @@ body {
         background-color: transparent;
         border: none;
         border-bottom: 1px solid vars.$color-light-grey;
-        &::placeholder{
+
+        &::placeholder {
             color: vars.$color-white;
         }
     }
@@ -160,13 +182,98 @@ body {
         gap: 0 37px;
         padding-right: 75px;
     }
-    
-    &__bottom-item + .footer__bottom-item{
+
+    &__bottom-item+.footer__bottom-item {
         position: relative;
-        &::before{
+
+        &::before {
             content: '|';
             position: absolute;
             left: -20px;
         }
     }
+}
+
+.top {
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__inner {
+        max-width: 520px;
+    }
+    
+    &__title {
+        padding-top: 260px;
+        line-height: 1.2;
+        font-size: 75px;
+        text-transform: uppercase;
+        @extend %lora-400;
+        color: vars.$color-black;
+        margin-bottom: 40px;
+    }
+
+    &__link {
+        padding: 12px 38px;
+        text-transform: uppercase;
+        color: vars.$color-white;
+        background-color: vars.$color-black;
+        border-radius: 3px;
+        font-size: 20px;
+    }
+}
+
+.new-collection {
+&__inner {
+    padding: 150px 0 90px 0;
+    display: flex;
+}
+&__content {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+}
+&__title {
+    padding-top: 75px;
+    margin-bottom: 25px;
+    color: vars.$color-black;
+    @extend %lora-500;
+}
+&__text {
+    font-size: 20px;
+    width: 400px;
+}
+&__text + .new-collection__text{
+    margin-top: 25px;
+}
+&__link {
+    display: inline-block;
+    padding: 10px 65px;
+    border: 1px solid ;
+    color: vars.$color-black;
+    margin-top: auto;
+    align-self: start;
+}
+&__img {
+    margin-top: 75px;
+}
+&__box {
+    position: relative;
+    padding-right: 30px;
+    display: flex;
+}
+&__box-img {
+    position: absolute;
+    top: 0;
+    left: -75px;
+    min-width: fit-content;
+}
+&__box-text {
+    width: 290px;
+    font-size: 20px;
+    padding-left: 40px;
+    margin-top: auto;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+}
 }
