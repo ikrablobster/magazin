@@ -4,23 +4,27 @@ $color-black: #161515;
 $color-grey: #4F4F4F;
 $color-light-grey: #CDCDCD;
 
-%inter-400{
+%inter-400 {
     font-family: 'Inter-Regular', sans-serif;
     font-weight: 400;
 }
-%lora-400{
+
+%lora-400 {
     font-family: 'Lora-Regular', serif;
     font-weight: 400;
 }
-%opensans-400{
+
+%opensans-400 {
     font-family: 'OpenSans-Regular', sans-serif;
     font-weight: 400;
 }
-%lora-500{
+
+%lora-500 {
     font-family: 'Lora-Medium', serif;
     font-weight: 500;
 }
-%opensans-700{
+
+%opensans-700 {
     font-family: 'OpenSans-Bold', sans-serif;
     font-weight: 700;
 }
