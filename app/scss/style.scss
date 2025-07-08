@@ -1,6 +1,6 @@
-@use 'vars';
 @use 'reset';
 @use 'fonts';
+@use 'vars';
 @use 'global';
 
 html,
@@ -9,10 +9,10 @@ body {
 }
 
 body {
-  @extend %opensans-400;
   font-size: 16px;
-  color: vars.$color-grey;
   line-height: 1.3;
+  color: vars.$color-grey;
+  @extend %opensans-400;
 }
 
 .promo {
@@ -40,6 +40,13 @@ body {
   max-width: 1220px;
   padding: 0 10px;
   margin: 0 auto;
+}
+
+.title-l4 {
+  font-size: 45px;
+  color: vars.$color-black;
+  text-transform: uppercase;
+  @extend %lora-400;
 }
 
 .header {
@@ -204,11 +211,7 @@ body {
 
   &__title {
     padding-top: 260px;
-    line-height: 1.2;
     font-size: 75px;
-    text-transform: uppercase;
-    @extend %lora-400;
-    color: vars.$color-black;
     margin-bottom: 40px;
   }
 
@@ -237,9 +240,6 @@ body {
   &__title {
     padding-top: 75px;
     margin-bottom: 25px;
-    color: vars.$color-black;
-    @extend %lora-400;
-    font-size: 45px;
   }
 
   &__text {
@@ -307,15 +307,13 @@ body {
   }
 
   &__title {
-    text-transform: uppercase;
-    font-size: 45px;
-    @extend %lora-500;
+    color: #fff;
     margin-bottom: 20px;
   }
 
   &__text {
     margin-bottom: 40px;
-    @extend %lora-500;
+    @extend %lora-400;
     font-size: 28px;
   }
 
@@ -373,10 +371,7 @@ body {
   }
 
   &__title {
-    text-transform: uppercase;
-    font-size: 45px;
     margin-bottom: 5px;
-    @extend %lora-400;
   }
 
   &__caption {
@@ -385,7 +380,7 @@ body {
     color: #fff;
     background-color: vars.$color-blue;
     margin: 70px 0;
-    @extend %lora-500;
+    @extend %lora-400;
     font-size: 20px;
   }
 
@@ -408,6 +403,7 @@ body {
   background-color: vars.$color-blue;
   color: #fff;
   margin-bottom: 150px;
+
   &__contant {
     position: relative;
     display: flex;
@@ -426,8 +422,7 @@ body {
   }
 
   &__title {
-    @extend %lora-400;
-    font-size: 45px;
+    color: #fff;
     margin-bottom: 50px;
   }
 
@@ -441,5 +436,50 @@ body {
     list-style: disc;
     font-size: 20px;
     margin-bottom: 30px;
+  }
+}
+
+.our-blog {
+  margin-bottom: 90px;
+
+  &__inner {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    max-width: 540px;
+    margin-bottom: 70px;
+  }
+
+  &__img {
+    margin-bottom: 20px;
+  }
+
+  &__box-link {
+    font-size: 20px;
+    margin-bottom: 5px;
+    @extend %lora-400;
+  }
+
+  &__box-date {
+    margin-bottom: 86px;
+  }
+
+  &__box {
+    max-width: 300px;
+  }
+
+  &__box-btn {
+    display: block;
+    padding: 10px 0;
+    border: 1px solid;
+    color: vars.$color-black;
+    margin-top: auto;
+    text-align: center;
   }
 }
