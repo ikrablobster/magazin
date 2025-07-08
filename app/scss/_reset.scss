@@ -45,6 +45,20 @@ select {
   font: inherit;
 }
 
+input {
+  padding: 0;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 @media (favors-reduced-motion: reduce) {
 
   *,
