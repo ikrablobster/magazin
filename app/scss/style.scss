@@ -239,6 +239,7 @@ body {
     margin-bottom: 25px;
     color: vars.$color-black;
     @extend %lora-400;
+    font-size: 45px;
   }
 
   &__text {
@@ -360,6 +361,7 @@ body {
 
 .d-backham {
   margin-bottom: 230px;
+
   &__inner {
     display: flex;
     justify-content: center;
@@ -392,8 +394,6 @@ body {
     flex-direction: column;
   }
 
-  &__img {}
-
   &__link {
     display: inline-block;
     padding: 10px 0;
@@ -401,5 +401,45 @@ body {
     color: vars.$color-black;
     margin-top: auto;
     text-align: center;
+  }
+}
+
+.our-advantages {
+  background-color: vars.$color-blue;
+  color: #fff;
+  margin-bottom: 150px;
+  &__contant {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__wrapper {
+    padding: 60px 0 38;
+    margin-left: auto;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    column-count: 2;
+    column-gap: 80px;
+    padding-left: 30px;
+  }
+
+  &__item {
+    list-style: disc;
+    font-size: 20px;
+    margin-bottom: 30px;
   }
 }
