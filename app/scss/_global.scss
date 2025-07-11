@@ -15,3 +15,44 @@
     display: none;
   }
 }
+
+.pagination {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+
+  &__list {
+    display: flex;
+    gap: 2px;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+  }
+
+  &__link-active {
+    color: #fff;
+    background-color: #4f4f4f;
+  }
+
+  &__arrow {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  &__arrow-disable {
+    display: none;
+  }
+}
