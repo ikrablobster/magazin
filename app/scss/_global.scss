@@ -1,0 +1,17 @@
+.breadcrumbs {
+  margin-bottom: 80px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item::after {
+    content: '/';
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  &__item:last-child::after {
+    display: none;
+  }
+}
