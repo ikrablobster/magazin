@@ -1,6 +1,7 @@
 @use 'reset';
 @use 'fonts';
 @use 'vars';
+@use '../../node_modules/swiper/swiper-bundle.css';
 @use 'global';
 
 html,
@@ -588,49 +589,272 @@ body {
 
 .appointment {
   margin-bottom: 100px;
-&__title {
-  margin-top: 15px;
-  margin-bottom: 80px;
-  text-align: center;
-}
-&__inner {
-  display: flex;
-  justify-content: center;
-  gap: 80px;
-}
-&__contant {
-  width: 540px;
-  display: flex;
-  flex-direction: column;
-}
-&__contant-title {
-  margin-bottom: 80px;
-  font-size: 30px;
-}
-&__contant-text {
-  margin-bottom: 30px;
-  font-size: 20px;
-  @extend %opensans-700;
-}
-&__contant-form {
-  display: flex;
-  flex-direction: column;
-  font-size: 20px;
-}
-&__contant-input {
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid vars.$color-grey;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+
+  &__title {
+    margin-top: 15px;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+  }
+
+  &__contant {
+    width: 540px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contant-title {
+    margin-bottom: 80px;
+    font-size: 30px;
+  }
+
+  &__contant-text {
+    margin-bottom: 30px;
+    font-size: 20px;
+    @extend %opensans-700;
+  }
+
+  &__contant-form {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+  }
+
+  &__contant-input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid vars.$color-grey;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__contant-btn {
+    margin-top: auto;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 3px;
+    color: #fff;
+    background-color: vars.$color-black;
+  }
 }
 
-&__contant-btn {
-  margin-top: auto;
-  padding: 12px 0;
-  width: 100%;
-  border-radius: 3px;
-  color: #fff;
-  background-color: vars.$color-black;
+.product {
+  margin-bottom: 150px;
+
+  &__inner {
+    display: flex;
+    gap: 0 40px;
+  }
+
+  &__images {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+
+    picture:nth-child(2) {
+      grid-row: span 2;
+    }
+
+    img {
+      max-width: max-content;
+    }
+  }
+
+  &__contant {
+    max-width: 505px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contant-title {
+    margin-bottom: 30px;
+  }
+
+  &__contant-price {
+    margin-bottom: 30px;
+    @extend %opensans-700;
+    font-size: 25px;
+  }
+
+  &__contant-term:nth-child(1) {
+    margin-bottom: 30px;
+  }
+
+  &__contant-term {
+    margin-bottom: 5px;
+    @extend %opensans-700;
+  }
+
+
+  &__contant-difinition {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  &__contant-difinition-radio {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__contant-difinition-checkbox {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 6px;
+    margin-top: auto;
+  }
+
+  &__btn {
+    padding: 9px;
+    border-radius: 3px;
+    border: 1px solid vars.$color-grey;
+    background-color: transparent;
+    color: vars.$color-grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+
+  &__btns-addtobag {
+    grid-column: 1/-1;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+
 }
+
+.radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+ &:checked+.radio-style::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: vars.$color-grey;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+}
+
+.radio-style {
+  position: absolute;
+  margin-left: -26px;
+  margin-top: 2px;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 1px solid vars.$color-grey;
+}
+
+.check-box {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  &:checked+.check-style::before {
+    content: '';
+    width: 9px;
+    height: 9px;
+    border-radius: 1px;
+    background-color: vars.$color-grey;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+  }
+}
+
+
+.check-style {
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 2px;
+  height: 15px;
+  width: 15px;
+  border-radius: 1px;
+  border: 1px solid vars.$color-grey;
+}
+
+.radio-label {
+  padding-left: 26px;
+}
+
+.check-label {
+  padding-left: 20px;
+}
+
+
+.look {
+  &__perfect {
+    margin-bottom: 90px;
+  }
+
+  &__perfect-title {
+    max-width: 890px;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+    border-bottom: 2px solid vars.$color-grey;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+  }
+
+  &__perfect-slider {
+    position: relative;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 0 30px;
+    overflow: hidden;
+  }
+
+  &__perfect-slide {
+    text-align: center;
+  }
+
+  &__perfect-name {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  &__perfect-price {
+    @extend %opensans-700;
+    font-size: 20px;
+  }
+
+  &__perfect-arrow {
+    position: absolute;
+    cursor: pointer;
+    top: 41%;
+    z-index: 10;
+  }
+
+  &__perfect-arrow-prev {
+    left: 4px;
+  }
+
+  &__perfect-arrow-next {
+    right: 4px;
+  }
+
 }
