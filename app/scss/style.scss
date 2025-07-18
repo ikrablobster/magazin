@@ -742,7 +742,8 @@ body {
   height: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
- &:checked+.radio-style::before {
+
+  &:checked+.radio-style::before {
     content: '';
     width: 10px;
     height: 10px;
@@ -857,4 +858,72 @@ body {
     right: 4px;
   }
 
+}
+
+.page-404 {
+  &__container {
+    max-width: 1560px;
+    padding: 0 10px;
+    margin: 0 auto;
+    display: flex;
+    color: vars.$color-black;
+  }
+
+  &__contant {
+    margin: 0 15px 0 35px;
+    margin-top: auto;
+    margin-bottom: 57px;
+    @extend %lora-400;
+  }
+
+  &__contant-title {
+    margin-bottom: 80px;
+    font-size: 160px;
+  }
+
+  &__contant-link {
+    font-size: 48px;
+    text-transform: uppercase;
+    display: inline-block;
+    display: flex;
+    align-items: end;
+    gap: 0 20px;
+
+    img {
+      height: 90px;
+      width: 90px;
+    }
+  }
+}
+
+.runline {
+  opacity: 0.2;
+  overflow: hidden;
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+    text-transform: uppercase;
+    color: vars.$color-black;
+    font-size: 160px;
+    white-space: nowrap;
+    animation: runline;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  img {
+    height: 115px;
+    width: 130px;
+  }
+
+}
+
+@keyframes runline{
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
 }
