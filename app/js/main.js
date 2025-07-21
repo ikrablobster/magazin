@@ -9,3 +9,19 @@ const swiper = new Swiper('.look__perfect-slider', {
     prevEl: '.look__perfect-arrow-prev',
   },
 });
+
+const swiperReviews = new Swiper('.reviews__slider', {
+  pagination: {
+    el: ".reviews__pagination",
+    type: "fraction",
+  },
+  loop: true,
+  slidesPerView: 9,
+  spaceBetween: 16,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.reviews__arrow-next',
+    prevEl: '.reviews__arrow-prev',
+  },
+});

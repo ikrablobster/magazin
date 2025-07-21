@@ -61,20 +61,6 @@ function styles(){
     .pipe(browserSync.stream())
 }
 
-function watching(){
-    browserSync.init({
-        server: {
-            baseDir: 'app/'
-        }
-    });
-    watch(['app/scss/*.scss'], styles)
-    watch(['app/images/src'], images)
-    watch(['app/images/sprite'], sprites)
-    watch(['app/pages/*', 'app/components/*'], pages)
-    watch(['app/js/.js'], styles)
-    watch(['app/*.html']).on('change', browserSync.reload)
-}
-
 function scripts(){
 return src([
     'node_modules/swiper/swiper-bundle.js',
@@ -85,6 +71,22 @@ return src([
     .pipe(dest('app/js'))
     .pipe(browserSync.stream())
 }
+
+function watching(){
+    browserSync.init({
+        server: {
+            baseDir: 'app/'
+        }
+    });
+    watch(['app/scss/*.scss'], styles)
+    watch(['app/images/src'], images)
+    watch(['app/images/sprite'], sprites)
+    watch(['app/pages/*', 'app/components/*'], pages)
+    watch(['app/js/.js'], scripts)
+    watch(['app/*.html']).on('change', browserSync.reload)
+}
+
+
 
 function building(){
     return src([

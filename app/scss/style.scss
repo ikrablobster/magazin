@@ -1161,7 +1161,7 @@ body {
       margin-bottom: 40px;
     }
 
-    
+
     b {
       max-width: 1220px;
       display: inline-block;
@@ -1171,10 +1171,11 @@ body {
       color: vars.$color-grey;
       margin-bottom: 20px;
     }
+
     b:last-of-type {
       margin-top: -20px;
     }
-    
+
     &>p {
       max-width: 1220px;
       font-size: 20px;
@@ -1197,6 +1198,9 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+    @extend %inter-400;
   }
 
   &__category {
@@ -1213,9 +1217,6 @@ body {
     position: relative;
     padding-right: 20px;
     margin-right: 20px;
-    font-size: 18px;
-    line-height: 1.6;
-    @extend %inter-400;
 
     &::after {
       content: '|';
@@ -1230,10 +1231,161 @@ body {
     gap: 16px;
   }
 
-  &__stats-item {}
 
   &__stats-link {
     display: flex;
     gap: 6px;
+    align-items: center;
+  }
+}
+
+.reviews {
+  margin-bottom: 60px;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    font-size: 64px;
+    line-height: 1.2;
+  }
+
+  &__link {
+    font-size: 24px;
+    color: rgba($color: #161815, $alpha: .4);
+    padding-bottom: 8px;
+    border-bottom: 1px solid vars.$color-black;
+  }
+
+  &__inner {
+    padding: 40px 50px;
+    margin-bottom: 20px;
+    border: 1px solid rgba($color: #161815, $alpha: .15);
+  }
+
+  &__box {
+    margin-top: 20px;
+  }
+
+  &__date {
+    font-size: 14px;
+    margin-bottom: 16px;
+    opacity: 0.4;
+  }
+
+  &__rating {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  &__rating-list {
+    display: flex;
+  }
+
+  &__user-box {
+    margin-bottom: 24px;
+  }
+
+  &__user-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+  }
+
+  &__rating-text {
+    font-size: 20px;
+    opacity: 0.8;
+    max-width: 870px;
+
+  }
+
+  &__rating-box {
+    margin-top: 24px;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__slider {
+    overflow: hidden;
+  }
+
+  &__slider-wrapper {
+    margin-bottom: 24px;
+  }
+
+
+  &__pagination {
+    position: absolute;
+    top: 2px;
+    right: 50px;
+    width: auto;
+    left: auto;
+    font-size: 18px;
+    @extend %inter-400;
+    color: rgba($color: #161815, $alpha: .3);
+    z-index: 10;
+  }
+
+  .swiper-pagination-current {
+    color: #161815;
+    margin-right: 20px;
+  }
+
+  .swiper-pagination-total {
+    margin-left: 20px;
+  }
+
+  &__slider-nav {
+    position: absolute;
+    max-width: 1520px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+
+  &__arrow {
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+  }
+
+  &__arrow-prev {
+    right: 160px;
+  }
+
+  &__arrow-next {
+    right: 0;
+  }
+
+  &__slider-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 27px;
+  }
+
+  &__rating-list {
+    margin-left: 10px;
+  }
+
+
+  &__slider-link {
+    margin-left: 20px;
+    padding-bottom: 0;
+    font-size: 16px;
+  }
+
+  &__link-addareview {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 24px 216px;
+    color: vars.$color-black;
+    border: 1px solid vars.$color-black;
+
   }
 }
